@@ -145,7 +145,7 @@ if exists("g:AutoClosePairs") && type(g:AutoClosePairs) == type({})
     let s:charsToClose = g:AutoClosePairs
     unlet g:AutoClosePairs
 else
-    let s:charsToClose = {'(': ')', '[': ']', '"': '"', "'": "'"}
+    let s:charsToClose = {'(': ')', '[': ']', '"': '"'}
 endif
 
 " let user define in which regions the autocomplete feature should not occur
