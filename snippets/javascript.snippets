@@ -6,12 +6,14 @@ snippet proto
 	};
 # Function
 snippet fun
-	function ${1:function_name} (${2:argument}) {
-		${3:// body...}
+	function${1:function_name}(${2}){
+		${3}
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {${2}};
+	function(${1}){
+		${2}
+	}
 # if
 snippet if
 	if (${1:true}) {${2}};
@@ -72,3 +74,21 @@ snippet get
 # Get Element
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
+snippet glog
+	console.group("${1}");
+	console.groupEnd();
+snippet log
+	console.log("${1}");
+# action
+snippet a
+	Action(function(v,n){
+		${1}
+		n(v)
+	})
+# action
+snippet r
+	Reactive
+		.on(${1:Events.bind("click")})
+		.await(${2})
+		.subscribe()
+
